@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui multimedia multimediawidgets printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,16 +9,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    emodetection.cpp \
     main.cpp \
     mainwindow.cpp \
-    videoframes.cpp
+    qcustomplot.cpp \
+    player.cpp
 
 HEADERS += \
+    emodetection.h \
     mainwindow.h \
-    videoframes.h
+    qcustomplot.h \
+    player.h
+
 
 FORMS += \
     mainwindow.ui
+
+OTHER_FILES += \
+    emo-detection/*
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
